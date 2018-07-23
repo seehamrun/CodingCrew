@@ -59,8 +59,11 @@ class HomePage(webapp2.RequestHandler):
 class EnterInfo(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/userInputPage.html')
-
-        self.response.write(template.render())
+        displayDay = self.request.get('day')
+        data = {
+            'day': displayDay
+        }
+        self.response.write(template.render(data))
 
 
 
