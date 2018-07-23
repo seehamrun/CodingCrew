@@ -25,8 +25,12 @@ jinja_env = jinja2.Environment(
 class HomePage(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/homepage.html')
+        january = {}
+        for i in range(0,31):
+            january[i] = "test"
+
         data = {
-             'jan': ""
+             'jan': january
         }
         self.response.write(template.render(data))
 
