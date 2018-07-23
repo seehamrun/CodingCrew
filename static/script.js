@@ -1,7 +1,7 @@
-var allJanDays = document.querySelectorAll('.january');
+var allDays = document.querySelectorAll('.date');
 
-for (var i = 0; i < allJanDays.length; i++) {
-    allJanDays[i].addEventListener('click', () => {
+for (var i = 0; i < allDays.length; i++) {
+    allDays[i].addEventListener('click', () => {
       console.log('click');
   });
 }
