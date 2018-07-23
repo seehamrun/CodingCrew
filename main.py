@@ -1,16 +1,9 @@
 import webapp2
 import jinja2
 import os
+import database
 from google.appengine.ext import ndb
 
-
-
-class DatabaseMoodDays(ndb.Model):
-    day = ndb.StringProperty()
-    mood = ndb.StringProperty()
-    notes = ndb.StringProperty()
-    sleep = ndb.IntegerProperty()
-    activity = ndb.IntegerProperty()
 
 
 
@@ -65,8 +58,14 @@ class EnterInfo(webapp2.RequestHandler):
         }
         self.response.write(template.render(data))
 
-
-
+    def post(self):
+        dayInput = self.request.get('day')
+        moodInput = self.request.get('mood')
+        notesInput = self.request.get('notes')
+        sleepInput = self.request.get('sleep')
+        activityInput = self.request.get('activity')
+        day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput, sleep=sleepInput, activity=activityInput)
+        day_log.put()
 
 class Suggestions(webapp2.RequestHandler):
     def get(self):
