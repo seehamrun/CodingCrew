@@ -23,7 +23,16 @@ jinja_env = jinja2.Environment(
 #HomePageHandler has a get method: Gets the grid template
 #          and fills in using loops we will write
 class HomePage(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/homepage.html')
+        january = {}
+        for i in range(0,31):
+            january[i] = "test"
 
+        data = {
+             'jan': january
+        }
+        self.response.write(template.render(data))
 
 
 
@@ -31,27 +40,35 @@ class HomePage(webapp2.RequestHandler):
 #and "submit" is hit, this generates a POST request), and a get
 #method (template userInoutPage.html of user input boxes)
 class EnterInfo(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/userInputPage.html')
 
+        self.response.write(template.render())
 
 
 
 
 class Suggestions(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/suggestions.html')
 
+        self.response.write(template.render())
 
 
 
 
 class ViewDay(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/viewPage.html')
 
-
+        self.response.write(template.render())
 
 
 
 
 app = webapp2.WSGIApplication([
-    (‘/’, HomePage),
-    (‘/daily_log’, EnterInfo),
-    (‘/suggestions’, Suggestions),
-    (‘/viewDay’, ViewDay),
+    ('/', HomePage),
+    ('/daily_log', EnterInfo),
+    ('/suggestions', Suggestions),
+    ('/view_day', ViewDay),
 ], debug=True)
