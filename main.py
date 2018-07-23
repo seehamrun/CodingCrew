@@ -77,14 +77,9 @@ class Suggestions(webapp2.RequestHandler):
 class ViewDay(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/viewPage.html')
-        values = {
-            "day": DatabaseMoodDays.query().fetch(day)
-            "mood": DatabaseMoodDays.query().fetch(mood)
-            "notes": DatabaseMoodDays.query().fetch(notes)
-            "sleep": DatabaseMoodDays.query().fetch(sleep)
-            "activity": DatabaseMoodDays.query().fetch(activity)
-        }
-        self.response.write(template.render(values))
+
+        self.response.write(template.render())
+
 
 
 
