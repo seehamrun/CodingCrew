@@ -16,7 +16,7 @@ Dec - 31
 <html>
 
 <head>
-
+<link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@ Dec - 31
   <tr>
     <td> JANUARY </td>
     {% for day in jan %}
-    <td id='Jan{{day}}' class = 'date'>
+    <td id='Jan{{day}}' class='date'>
       <a href="/daily_log?day=Jan{{day}}">{{day}}</a>
     </td>
     {% endfor %}
@@ -36,7 +36,7 @@ Dec - 31
   <tr>
     <td> FEBRUARY </td>
     {% for day in feb %}
-    <td id='Feb{{day}}' class = 'date'>
+    <td id='Feb{{day}}' class='date'>
         <a href="/daily_log?day=February{{day}}">{{day}}</a>
     </td>
     {% endfor %}
@@ -133,8 +133,6 @@ Dec - 31
   </tr>
 
 </table>
-
-<!-- <script type="text/javascript" src="/static/script.js"> </script> -->
 
 </body>
 
