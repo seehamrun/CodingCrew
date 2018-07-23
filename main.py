@@ -35,7 +35,6 @@ class HomePage(webapp2.RequestHandler):
         for i in range(0,28):
             february[i] = "test"
 
-
         data = {
              'jan': thirty_one,
              'feb': february,
