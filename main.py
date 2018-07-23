@@ -26,14 +26,14 @@ class HomePage(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/homepage.html')
         thirty_one = {}
-        for i in range(0,31):
-            thirty_one[i] = "test"
+        for i in range(1,32):
+            thirty_one[i] = i
         thirty = {}
-        for i in range(0,30):
-            thirty[i] = "test"
+        for i in range(1,31):
+            thirty[i] = i
         february = {}
-        for i in range(0,28):
-            february[i] = "test"
+        for i in range(1,29):
+            february[i] = i
 
         data = {
              'jan': thirty_one,
