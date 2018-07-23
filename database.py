@@ -5,3 +5,4 @@ class StoredDate(ndb.Model):
     notes = ndb.StringProperty()
     sleep = ndb.StringProperty()
     activity = ndb.StringProperty()
+    color = ndb.StringProperty()

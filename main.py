@@ -5,8 +5,6 @@ import database
 from google.appengine.ext import ndb
 
 
-
-
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -28,7 +26,7 @@ class HomePage(webapp2.RequestHandler):
         for i in range(1,29):
             february[i] = i
 
-        data = {
+        values = {
              'jan': thirty_one,
              'feb': february,
              'mar': thirty_one,
@@ -42,7 +40,16 @@ class HomePage(webapp2.RequestHandler):
              'nov': thirty,
              'dec': thirty_one,
         }
-        self.response.write(template.render(data))
+
+        dates = database.StoredDate.query().fetch()
+
+        colors = {}
+        for date in dates:
+            colors[date.day] = date.color
+
+        values["colors"] = colors
+
+        self.response.write(template.render(values))
 
 
 
@@ -64,9 +71,25 @@ class EnterInfo(webapp2.RequestHandler):
         notesInput = self.request.get('notes')
         sleepInput = self.request.get('sleep')
         activityInput = self.request.get('activity')
+# finish if statement for other moods
+        colorInput = "white"
+        if(moodInput == "happy"):
+            colorInput = "#F6D357"
+        elif(moodInput == "sad"):
+            colorInput="#5687A3"
+        elif(moodInput == "angry"):
+            colorInput="#CC2431"
+        elif(moodInput == "tired"):
+            colorInput="#9F9FA1"
+        elif(moodInput == "calm"):
+            colorInput="#88B24B"
+        else:
+            colorInput="#2a466d"
+
         print('received post request')
         print(dayInput + moodInput + notesInput + sleepInput + activityInput)
-        day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput, sleep=sleepInput, activity=activityInput)
+        day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput,
+                                      sleep=sleepInput, activity=activityInput, color=colorInput)
         day_log.put()
 
 class Suggestions(webapp2.RequestHandler):
