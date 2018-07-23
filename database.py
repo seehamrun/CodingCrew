@@ -3,5 +3,5 @@ class StoredDate(ndb.Model):
     day = ndb.StringProperty()
     mood = ndb.StringProperty()
     notes = ndb.StringProperty()
-    sleep = ndb.IntegerProperty()
-    activity = ndb.IntegerProperty()
+    sleep = ndb.StringProperty()
+    activity = ndb.StringProperty()

@@ -64,6 +64,8 @@ class EnterInfo(webapp2.RequestHandler):
         notesInput = self.request.get('notes')
         sleepInput = self.request.get('sleep')
         activityInput = self.request.get('activity')
+        print('received post request')
+        print(dayInput + moodInput + notesInput + sleepInput + activityInput)
         day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput, sleep=sleepInput, activity=activityInput)
         day_log.put()
 
