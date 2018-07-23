@@ -25,12 +25,30 @@ jinja_env = jinja2.Environment(
 class HomePage(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/homepage.html')
-        january = {}
+        thirty_one = {}
         for i in range(0,31):
-            january[i] = "test"
+            thirty_one[i] = "test"
+        thirty = {}
+        for i in range(0,30):
+            thirty[i] = "test"
+        february = {}
+        for i in range(0,28):
+            february[i] = "test"
+
 
         data = {
-             'jan': january
+             'jan': thirty_one,
+             'feb': february,
+             'mar': thirty_one,
+             'apr': thirty,
+             'may': thirty_one,
+             'june': thirty,
+             'july': thirty_one,
+             'aug': thirty_one,
+             'sep': thirty,
+             'oct': thirty_one,
+             'nov': thirty,
+             'dec': thirty_one,
         }
         self.response.write(template.render(data))
 
