@@ -20,13 +20,14 @@ Dec - 31
 </head>
 
 <body>
+
 <h1> Mood Calendar </h1>
 
 <table>
   <tr>
     <td> JANUARY </td>
     {% for day in jan %}
-    <td id='jan{{day}}'> {{day}} </td>
+    <td id='jan{{day}}' class = 'january'> {{day}} </td>
     {% endfor %}
   </tr>
 
@@ -108,6 +109,9 @@ Dec - 31
   </tr>
 
 </table>
+
+<script type="text/javascript" src="/static/script.js"> </script>
+
 </body>
 
 </html>
