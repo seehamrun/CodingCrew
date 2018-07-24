@@ -6,3 +6,4 @@ class StoredDate(ndb.Model):
     sleep = ndb.StringProperty()
     activity = ndb.StringProperty()
     color = ndb.StringProperty()
+    username =ndb.StringProperty()
