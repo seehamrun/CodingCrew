@@ -1,10 +1,15 @@
-<html>
+<html id="userPage">
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="static/style.css">
   <h1 id="title">Today is {{day}} and i'm feeling.... </h1>
 </head>
 
 <body>
+  <br>
+  <br>
+  <br>
+  <br>
+
   <form method="post">
     <div>Mood:
       <select name='mood'>
@@ -20,7 +25,7 @@
 
     <div>
       <p>Hours of Sleep:
-      <select name="sleep" size="3">
+      <select name="sleep">
         <option value="0-4">0-4</option>
         <option value="4-6">4-6</option>
         <option value="6-8">6-8</option>
@@ -31,7 +36,7 @@
 
     <div>
       <p>Minutes of Physical Activity:
-      <select name="activity" size="3">
+      <select name="activity">
         <option value="0 minutes">0-4</option>
         <option value="1-20 minutes">4-6</option>
         <option value="20-40 minutes">6-8</option>
