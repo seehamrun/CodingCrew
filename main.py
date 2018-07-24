@@ -3,6 +3,8 @@ import jinja2
 import os
 import database
 import logging
+import json
+from google.appengine.api import urlfetch
 from google.appengine.api import users
 from google.appengine.ext import ndb
 
@@ -69,6 +71,7 @@ class EnterInfo(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/userInputPage.html')
         displayDay = self.request.get('day')
+
         data = {
             'day': displayDay
         }
@@ -110,8 +113,19 @@ class EnterInfo(webapp2.RequestHandler):
 class Suggestions(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/suggestions.html')
+        displayDay = self.request.get('day')
+        allDays = database.StoredDate.query().fetch()
+        queryMood = self.request.get('mood')
 
-        self.response.write(template.render())
+        url = 'https://freemusicarchive.org/api/trackSearch?q='+ queryMood +'&limit=5'
+        response = json.loads(urlfetch.fetch(url).content)
+
+
+        data = {
+             'music': response["aRows"]
+        }
+
+        self.response.write(template.render(data))
 
 
 
