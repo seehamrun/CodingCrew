@@ -1,7 +1,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-  <h1 id="title">...{{day}}... </h1>
+  <h1 id="title">Today is {{day}} and i'm feeling.... </h1>
 </head>
 
 <body>
@@ -41,8 +41,8 @@
     </div>
 
     <input type="hidden" name="day" value="{{day}}">
-    <input type="submit">
-
+    <a href="/suggestions?day=Jan{{day}}">Suggestions for your mood :)))</a>
+    <a href="/view_day?day=Jan{{day}}">View Day!!</a>
   </form>
 
   <!-- <script type="text/javascript" src="/static/script.js"> </script> -->

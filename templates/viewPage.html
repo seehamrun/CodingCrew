@@ -6,29 +6,24 @@
 
 <body>
 
-      <div>
-        <p> Day: {{day}} </p>
-      </div>
+  <table>
+      <tr>
+        <td>Day: </td>
+        <td>Mood: </td>
+        <td>Notes:</td>
+        <td>Hours Sleep:</td>
+        <td>Minutes Physical Activity: </td>
+      </tr>
+      <tr>
+        % for element in day
+        <td>jan{{day}}</td>
+        <td>{{day.Mood}}</td>
+        <td>{{day.Notes}}</td>
+        <td>{{day.Hours}}</td>
+      </tr>
+    </table>
 
-      <div>
-        <p> Mood: {{mood}} </p>
-      </div>
-
-
-      <div>
-        <p> Notes: {{notes}} </p>
-      </div>
-
-      <div>
-        <p> Sleep: {{sleep}} </p>
-      </div>
-
-      <div>
-        <p> Activity: {{activity}} </p>
-      </div>
-
-<input type="submit" value="Return to Mood Map!!">
-
+<a href="/">Head back to your mood map!!</a>
 </body>
 
 </html>

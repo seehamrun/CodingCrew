@@ -104,7 +104,10 @@ class Suggestions(webapp2.RequestHandler):
 class ViewDay(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/viewPage.html')
-
+        displayDay = self.request.get('day')
+        data = {
+            'day': database.StoredDate.query().fetch()
+        }
         self.response.write(template.render())
 
 
