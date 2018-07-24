@@ -1,10 +1,17 @@
-<html>
+<html id="userPage">
 <head>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="static/style.css">
   <h1 id="title">Today is {{day}} and I'm feeling.... </h1>
+
 </head>
 
 <body>
+  <br>
+  <br>
+  <br>
+  <br>
+
   <form method="post">
     <div>Mood:
       <select name='mood'>
@@ -16,11 +23,12 @@
       <option value="stressed">Stressed</option>
     </select>
   </div> <br>
-    <div>Notes: <textarea rows= "5" col = "200" name = "notes"></textarea></div>
+    <div>Notes of Reflection:<div>
+    </div><textarea rows= "6" col = "200" name = "notes"></textarea></div>
 
-    <div>
+    <div style="">
       <p>Hours of Sleep:
-      <select name="sleep" size="3">
+      <select name="sleep">
         <option value="0-4">0-4</option>
         <option value="4-6">4-6</option>
         <option value="6-8">6-8</option>
@@ -31,23 +39,32 @@
 
     <div>
       <p>Minutes of Physical Activity:
-      <select name="activity" size="3">
+
+      <select name="activity">
         <option value="0 minutes">0-4</option>
         <option value="1-20 minutes">4-6</option>
         <option value="20-40 minutes">6-8</option>
         <option value="40-60">8-10</option>
-        <option value="60+">10+</option>
-      </select> </p>
+        <option value="60+">10+</option></p>
     </div>
 
     <input type="hidden" name="day" value="{{day}}">
+<<<<<<< HEAD
 
+=======
+>>>>>>> f4e431301d036ccde31ccad08a8c3ba09fce248a
     <br>
     <br>
-    <a href="/view_day?day={{day}}">View your daily notes!</a>
     <br>
     <br>
-    <input type="submit">
+    <input style="background-color:pink; border-radius: 50px;" type="submit">
+    <br>
+    <br>
+    <a style="background-color:pink; border-radius: 50px;" href="/suggestions?day={{day}}">           Suggestions for your mood :)))       </a>
+    <br>
+    <br>
+    <a style="background-color:pink; border-radius: 50px;" href="/view_day?day={{day}}">View your daily notes!</a>
+
   </form>
 
   <!-- <script type="text/javascript" src="/static/script.js"> </script> -->
