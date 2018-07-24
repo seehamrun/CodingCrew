@@ -1,22 +1,38 @@
 <html>
 <head>
-  <link rel="stylesheet" href="style.css">
-  <h1>A reflection of ..... {{date}} </h1>
+  <link rel="stylesheet" href="static/style.css">
+  <h1 class=viewDayList>A Reflection of {{date}} </h1>
 </head>
 
-<body>
+<body id='daypage'>
 
   <ul>
         <li>Day: {{date}}</li>
+        <br>
+        <br>
         <li>Mood: {{mood}}</li>
+        <br>
+        <br>
         <li>Notes: {{notes}} </li>
+        <br>
+        <br>
         <li>Hours Sleep: {{sleep}}</li>
+        <br>
+        <br>
         <li>Minutes Physical Activity: {{activity}}</li>
   </ul>
 
     </table>
 
-<a href="/">Head back to your mood map!!</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<a id='linkMoodMap' href="/">Head back to your mood map!!</a>
 </body>
 
 </html>
