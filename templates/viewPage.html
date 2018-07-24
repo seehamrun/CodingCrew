@@ -1,27 +1,27 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-  <header>A reflection of {{day}} </header>
+  <header>A reflection of {{date}} </header>
 </head>
 
 <body>
 
   <table>
       <tr>
-        <td>Day: </td>
-        <td>Mood: </td>
-        <td>Notes:</td>
-        <td>Hours Sleep:</td>
+        <td>Day: {{date}}</td>
+        <td>Mood: {{mood}}</td>
+        <td>Notes:  </td>
+        <td>Hours Sleep: </td>
         <td>Minutes Physical Activity: </td>
       </tr>
-      <tr>
+      <!-- <tr>
         % for element in day
         <td>Day</td>
         <td>Mood</td>
         <td>Notes</td>
-        <td>HOuurs of Sleep</td>
+        <td>Hours of Sleep</td>
         <td>Minutes of Physical Activity</td>
-      </tr>
+      </tr> -->
     </table>
 
 <a href="/">Head back to your mood map!!</a>

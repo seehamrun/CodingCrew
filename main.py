@@ -105,10 +105,12 @@ class ViewDay(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/viewPage.html')
         displayDay = self.request.get('day')
+        displayMood = self.request.get('mood')
         data = {
-            'day': database.StoredDate.query().fetch()
+            'date': displayDay,
+            'mood': displayMood
         }
-        self.response.write(template.render())
+        self.response.write(template.render(data))
 
 
 
