@@ -95,3 +95,7 @@ td{
   width: 97%;
   height: 97%;
 }
+
+.logout {
+  float: right;
+}
