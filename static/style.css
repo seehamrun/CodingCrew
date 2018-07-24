@@ -31,10 +31,16 @@ html{
 
 }
 
-h1,td{
+h1{
   font-family: arial;
   color: black;
 }
+
+td{
+  font-family: arial;
+  padding: 10px;
+}
+
 
 #headl{
   text-align: center;
