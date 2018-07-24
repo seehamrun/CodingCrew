@@ -31,6 +31,16 @@ html{
 
 }
 
+a:link, a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: blue;
+  font-style: oblique;
+}
+
 h1{
   font-family: arial;
   color: black;
