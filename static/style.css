@@ -7,6 +7,17 @@ html, body
     width: 100%;
 }
 
+html{
+  background-color: pink;
+}
+
+#colorKey{
+  align: center;
+  background-color: white;
+  width: 200px;
+  height: 200px
+
+}
 
 .center{
   text-align: center;
