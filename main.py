@@ -91,6 +91,11 @@ class EnterInfo(webapp2.RequestHandler):
         day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput,
                                       sleep=sleepInput, activity=activityInput, color=colorInput)
         day_log.put()
+        response_html = jinja_env.get_template('templates/userInputPage.html')
+        data = {
+            'day': dayInput
+        }
+        self.response.write(response_html.render(data))
 
 class Suggestions(webapp2.RequestHandler):
     def get(self):
@@ -108,7 +113,6 @@ class ViewDay(webapp2.RequestHandler):
         displayMood = self.request.get('mood')
         data = {
             'date': displayDay,
-            'mood': displayMood
         }
         self.response.write(template.render(data))
 
