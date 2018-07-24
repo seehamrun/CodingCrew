@@ -2,6 +2,8 @@ import webapp2
 import jinja2
 import os
 import database
+import logging
+from google.appengine.api import users
 from google.appengine.ext import ndb
 
 
@@ -15,6 +17,8 @@ jinja_env = jinja2.Environment(
 #          and fills in using loops we will write
 class HomePage(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        logging.info('current user is %s' % (user.nickname()))
         template = jinja_env.get_template('templates/homepage.html')
         thirty_one = {}
         for i in range(1,32):
@@ -26,7 +30,12 @@ class HomePage(webapp2.RequestHandler):
         for i in range(1,29):
             february[i] = i
 
+        dates = database.StoredDate.query(database.StoredDate.username == user.nickname()).fetch()
+
         values = {
+            'user_nickname': user.nickname(),
+             'storedDate':dates,
+             'logoutUrl': users.create_logout_url('/'),
              'jan': thirty_one,
              'feb': february,
              'mar': thirty_one,
@@ -41,7 +50,7 @@ class HomePage(webapp2.RequestHandler):
              'dec': thirty_one,
         }
 
-        dates = database.StoredDate.query().fetch()
+
 
         colors = {}
         for date in dates:
@@ -66,6 +75,7 @@ class EnterInfo(webapp2.RequestHandler):
         self.response.write(template.render(data))
 
     def post(self):
+        user= users.get_current_user().nickname()
         dayInput = self.request.get('day')
         moodInput = self.request.get('mood')
         notesInput = self.request.get('notes')
@@ -89,7 +99,7 @@ class EnterInfo(webapp2.RequestHandler):
         print('received post request')
         print(dayInput + moodInput + notesInput + sleepInput + activityInput)
         day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput,
-                                      sleep=sleepInput, activity=activityInput, color=colorInput)
+                                  sleep=sleepInput, activity=activityInput, color=colorInput, username=user)
         day_log.put()
         response_html = jinja_env.get_template('templates/userInputPage.html')
         data = {
