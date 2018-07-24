@@ -110,9 +110,23 @@ class ViewDay(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/viewPage.html')
         displayDay = self.request.get('day')
-        displayMood = self.request.get('mood')
+        allDays = database.StoredDate.query().fetch()
+        moodInput = ""
+        notesInput = ""
+        sleepInput = ""
+        activityInput = ""
+        for obj in allDays:
+            if(obj.day == displayDay):
+                moodInput = obj.mood
+                notesInput = obj.notes
+                sleepInput = obj.sleep
+                activityInput = obj.activity
         data = {
             'date': displayDay,
+            'mood': moodInput,
+            'notes': notesInput,
+            'sleep': sleepInput,
+            'activity': activityInput
         }
         self.response.write(template.render(data))
 
