@@ -6,6 +6,7 @@ html, body
     height: 100%;
     width: 100%;
 }
+
 #userPage{
   text-align: center;
   padding-top: 50px;
@@ -39,6 +40,7 @@ font-size: 18px;
 }
 
 
+
 #linkToMap{
   text-align: center;
 }
@@ -70,7 +72,7 @@ font-size: 18px;
 
 .center{
   text-align: center;
-  width: 100%;
+  width: 50px;
   height: 100%;
   background: #9F9FA1;
   border-radius: 10px;
@@ -95,8 +97,11 @@ h1,p,a,li{
 
 td{
   font-family: arial;
-  padding: 15px;
   border-radius: 30%;
+}
+
+.date{
+    padding: 10px;
 }
 
 
