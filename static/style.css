@@ -22,7 +22,7 @@ html{
 
 #daypage{
 text-align: center;
-font-family: 'American Typewriter', serif;
+font-family: arial;
 font-size: 18px;
 
 }
@@ -34,7 +34,7 @@ font-size: 18px;
 
 #title{
   text-align: center;
-  font-family: 'American Typewriter', serif;
+  font-family: arial;
   font-size: 50px;
 }
 
@@ -95,13 +95,15 @@ h1,p,a,li{
 
 td{
   font-family: arial;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 30%;
 }
 
 
 #headl{
   color: white;
   text-align: center;
+  padding-top: 20px;
   height: 60px;
   background: red; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #CC2431 , #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* For Safari 5.1 to 6.0 */
