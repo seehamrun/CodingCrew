@@ -41,3 +41,8 @@ html{
   background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
   border-radius: 40px;
 }
+
+#moodKey{
+  width: 97%;
+  height: 97%;
+}
