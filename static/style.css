@@ -55,6 +55,7 @@ font-size: 18px;
   text-align: center;
   width: 100%;
   height: 100%;
+  background: #9F9FA1;
   border-radius: 10px;
 
 
@@ -70,6 +71,7 @@ a:hover{
   font-style: oblique;
 }
 
+h1,p,a,li{
   font-family: arial;
   color: black;
 }
