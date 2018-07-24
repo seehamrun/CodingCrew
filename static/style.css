@@ -13,7 +13,7 @@ html, body
   padding-right: 30px;
   padding-bottom: 50px;
   padding-left: 80px;
-  background: linear-gradient(#E55D87, #5FC3E4);
+  background: white;
 }
 
 
@@ -59,7 +59,7 @@ font-size: 18px;
   height: 5%;
   background: white;
   border-radius: 10px;
-  background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+  /* background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4); */
 
 
 }
@@ -105,7 +105,7 @@ td{
 }
 
 
-#headl{
+.headl{
   color: white;
   text-align: center;
   padding-top: 20px;
