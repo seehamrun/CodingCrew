@@ -1,11 +1,16 @@
+<html>
 
+<head>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/static/script.js"></script> -->
+</head>
 
-
-
-
-
-
-
-
-
-<a href="/">Head back to your mood map!!</a>
+<body>
+  {% for song in music %}
+  <div id='result'>
+    <p> {{song}} </p>
+  </div>
+  {% endfor %}
+  <a href="/">Head back to your mood map!!</a>
+</body>
+</html>
