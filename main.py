@@ -112,6 +112,7 @@ class EnterInfo(webapp2.RequestHandler):
 
 class Suggestions(webapp2.RequestHandler):
     def get(self):
+        user= users.get_current_user().nickname()
         template = jinja_env.get_template('templates/suggestions.html')
         displayDay = self.request.get('day')
         allDays = database.StoredDate.query().fetch()
@@ -122,6 +123,7 @@ class Suggestions(webapp2.RequestHandler):
 
 
         data = {
+            'mood': queryMood,
              'music': response["aRows"]
         }
 
