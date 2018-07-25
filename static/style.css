@@ -94,7 +94,7 @@ a:hover{
   font-style: oblique;
 }
 
-h1,p,a,li{
+p,a,li{
   font-family: arial;
   color: black;
 }
@@ -116,6 +116,7 @@ td{
 
 
 .headl{
+  font-family: arial;
   text-align: center;
   padding-top: 20px;
   height: 60px;
