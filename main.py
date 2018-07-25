@@ -77,6 +77,9 @@ class EnterInfo(webapp2.RequestHandler):
         data = {
             'day': displayDay
         }
+        dates = database.StoredDate.query(database.StoredDate.day == displayDay).fetch()
+        if len(dates) > 0:
+            self.redirect("/view_day?day=%s" % displayDay)
         self.response.write(template.render(data))
 
     def post(self):
