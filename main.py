@@ -4,6 +4,7 @@ import os
 import database
 import logging
 import json
+import random
 import time
 from google.appengine.api import urlfetch
 from google.appengine.api import users
@@ -105,13 +106,19 @@ class EnterInfo(webapp2.RequestHandler):
         day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput,
                                   sleep=sleepInput, activity=activityInput, color=colorInput, username=user)
         day_log.put()
-        # response_html = jinja_env.get_template('templates/userInputPage.html')
-        # data = {
-        #     'day': dayInput
-        # }
-        # self.response.write(response_html.render(data))
         time.sleep(0.1)
         self.redirect("/view_day?day=%s" % dayInput)
+
+giphy_api_key = "GgFZf48OO1lfS1C4hm9gMI0jt2sMIaFS"
+
+def queryGiphy(mood):
+    url = "http://api.giphy.com/v1/gifs/search?api_key=%s&q=%s&limit=%d"%(giphy_api_key, mood, 100)
+    response = json.loads(urlfetch.fetch(url).content)["data"]
+    response = random.choice(response)
+    response = response["images"]
+    response = response["downsized"]
+    response = response["url"]
+    return response
 
 class Suggestions(webapp2.RequestHandler):
     def get(self):
@@ -119,6 +126,8 @@ class Suggestions(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/suggestions.html')
         displayDay = self.request.get('day')
         allDays = database.StoredDate.query().fetch()
+
+
         queryMood = self.request.get('mood')
 
         url = 'https://freemusicarchive.org/api/trackSearch?q='+ queryMood +'&limit=5'
@@ -127,8 +136,12 @@ class Suggestions(webapp2.RequestHandler):
 
         data = {
             'mood': queryMood,
-             'music': response["aRows"]
+            'music': response["aRows"],
+            'gif': queryGiphy(queryMood)
+
         }
+
+        # return self.response.write(queryGiphy(queryMood))
 
         self.response.write(template.render(data))
 
