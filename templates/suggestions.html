@@ -3,15 +3,24 @@
 <head>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="/static/script.js"></script> -->
-<link rel="stylesheet" href="static/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/static/script.js"></script>
 </head>
 
 <body>
+  {{user_nickname}}
   {% for song in music %}
   <div id='result'>
     <p> {{song}} </p>
   </div>
   {% endfor %}
-  <a id="linkMoodMap" href="/">Head back to your mood map!!</a>
+  <a href="/">Head back to your mood map!!</a>
+
+<br>
+<br>
+
+
+<div id="result"></div>
+
 </body>
 </html>
