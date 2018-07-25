@@ -38,7 +38,6 @@ class HomePage(webapp2.RequestHandler):
 
         values = {
             'user_nickname': user.nickname(),
-             'storedDate':dates,
             'storedDate':dates,
             'logoutUrl': users.create_logout_url('/'),
             'jan': thirty_one,
