@@ -110,7 +110,7 @@ class EnterInfo(webapp2.RequestHandler):
         #     'day': dayInput
         # }
         # self.response.write(response_html.render(data))
-        time.sleep(1)
+        time.sleep(0.1)
         self.redirect("/view_day?day=%s" % dayInput)
 
 class Suggestions(webapp2.RequestHandler):
