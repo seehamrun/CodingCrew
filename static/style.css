@@ -1,11 +1,14 @@
 /* #Jan12{
   background-color: #CC2431;
 } */
-html, body
+html
 {
     height: 100%;
     width: 100%;
+    background-image: url(contemporary_china.jpg);
+    background-repeat: repeat;
 }
+
 
 #userPage{
   text-align: center;
