@@ -124,7 +124,7 @@ td{
   background: -o-linear-gradient(right, #CC2431, #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, #CC2431, #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #CC2431 , #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* Standard syntax (must be last) */
-  border-radius: 40px;
+  /* border-radius: 10%; */
 }
 
 #linkMoodMap{
@@ -156,7 +156,7 @@ td{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  height: 40%;
 }
 
 textarea{
