@@ -6,6 +6,7 @@ import logging
 import json
 import random
 import time
+import datetime
 from google.appengine.api import urlfetch
 from google.appengine.api import users
 from google.appengine.ext import ndb
@@ -33,10 +34,10 @@ class HomePage(webapp2.RequestHandler):
         february = {}
         for i in range(1,29):
             february[i] = i
-
+        times = "Current date is %s %s , %s" % (datetime.datetime.now().month, datetime.datetime.now().day, datetime.datetime.now().year)
         dates = database.StoredDate.query(database.StoredDate.username == user.nickname()).fetch()
-
         values = {
+            'time': times,
             'user_nickname': user.nickname(),
             'storedDate':dates,
             'logoutUrl': users.create_logout_url('/'),
