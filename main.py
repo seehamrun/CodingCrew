@@ -138,13 +138,19 @@ class Suggestions(webapp2.RequestHandler):
 
         queryMood = self.request.get('mood')
 
-        url = 'https://freemusicarchive.org/api/trackSearch?q='+ queryMood +'&limit=5'
-        response = json.loads(urlfetch.fetch(url).content)
+        url = 'https://freemusicarchive.org/api/trackSearch?q='+ queryMood +'&limit=50'
+        print(urlfetch.fetch(url).content)
+        tempResponse = json.loads(urlfetch.fetch(url).content)
+        tempResponse = tempResponse["aRows"]
+        response = []
+        for i in range(0,5):
+            response.append(random.choice(tempResponse))
+
 
 
         data = {
             'mood': queryMood,
-            'music': response["aRows"],
+            'music': response,
             'gif': queryGiphy(queryMood)
 
         }
