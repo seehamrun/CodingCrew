@@ -148,6 +148,17 @@ td{
   text-decoration: none;
 }
 
+#goBack{
+  text-align: center;
+}
+
+#resultImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 textarea{
   background-color:#88B24B;
   font-size:15px;
