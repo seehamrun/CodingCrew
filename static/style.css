@@ -6,6 +6,7 @@ html, body
     height: 100%;
     width: 100%;
 }
+
 #userPage{
   text-align: center;
   padding-top: 50px;
@@ -14,6 +15,7 @@ html, body
   padding-left: 80px;
   background: white;
 }
+
 
 html{
   background-color: white;
@@ -37,6 +39,8 @@ font-size: 18px;
   font-size: 50px;
 }
 
+
+
 #linkToMap{
   text-align: center;
 }
@@ -55,7 +59,7 @@ font-size: 18px;
   height: 5%;
   background: white;
   border-radius: 10px;
-  /*background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);*/
+  /* background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4); */
 
 
 }
@@ -93,22 +97,23 @@ h1,p,a,li{
 
 td{
   font-family: arial;
-  padding: 30%;
+  border-radius: 30%;
 }
 
 .date{
-  padding: 10px;
+    padding: 10px;
 }
 
 
-#headl{
+.headl{
   text-align: center;
-  height: 50px;
+  padding-top: 20px;
+  height: 60px;
   background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(left, #CC2431 , #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #CC2431, #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #CC2431, #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #CC2431 , #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* Standard syntax (must be last) */
   border-radius: 40px;
 }
 
@@ -129,8 +134,8 @@ td{
 }
 
 textarea{
-
-  background-color: #88B24B;
+  background-color:#88B24B;
+  font-size:15px;
 }
 
 select{
