@@ -79,7 +79,8 @@ class EnterInfo(webapp2.RequestHandler):
             'day': displayDay
         }
 
-        userDates = database.StoredDate.query(database.StoredDate.username == user.nickname()).fetch()
+        storedData = database.StoredDate.query(database.StoredDate.username == user.nickname()).fetch()
+        userDates = [storedDatum.day for storedDatum in storedData]
 
         if(displayDay in userDates):
             self.redirect("/view_day?day=%s" % displayDay)
