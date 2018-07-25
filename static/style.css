@@ -155,6 +155,7 @@ td{
 
 .songs{
   text-align: center;
+  text-decoration: none;
 }
 
 textarea{
