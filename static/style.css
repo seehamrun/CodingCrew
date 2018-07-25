@@ -16,19 +16,11 @@ html, body
   background: white;
 }
 
-#goBack{
-  text-align:center;
-}
+
+
 
 html{
   background-color: white;
-}
-
-#resultImg{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
 }
 
 #daypage{
@@ -43,12 +35,11 @@ font-size: 18px;
   color: black;
 }
 
-/* #title{
-  width: 100%;
+#title{
   text-align: center;
   font-family: arial;
   font-size: 50px;
-} */
+}
 
 
 
@@ -127,7 +118,6 @@ td{
 .headl{
   text-align: center;
   padding-top: 20px;
-  width: 100%;
   height: 60px;
   background: red; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #CC2431 , #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1); /* For Safari 5.1 to 6.0 */
@@ -155,6 +145,7 @@ td{
 
 .songs{
   text-align: center;
+  text-decoration: none;
 }
 
 textarea{
