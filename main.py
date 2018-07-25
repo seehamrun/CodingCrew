@@ -71,14 +71,19 @@ class HomePage(webapp2.RequestHandler):
 #method (template userInoutPage.html of user input boxes)
 class EnterInfo(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
         template = jinja_env.get_template('templates/userInputPage.html')
         displayDay = self.request.get('day')
 
         data = {
             'day': displayDay
         }
-        dates = database.StoredDate.query(database.StoredDate.day == displayDay).fetch()
-        if len(dates) > 0:
+
+        userDates = database.StoredDate.query(database.StoredDate.username == user.nickname()).fetch()
+        # dates = database.StoredDate.query(database.StoredDate.day == displayDay).fetch()
+
+        # if len(dates) > 0:
+        if displayDay in userDates:
             self.redirect("/view_day?day=%s" % displayDay)
         self.response.write(template.render(data))
 
