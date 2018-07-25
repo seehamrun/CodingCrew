@@ -9,7 +9,7 @@ html
     background-repeat: repeat;
 }
 
-
+/*
 #userPage{
   text-align: center;
   padding-top: 50px;
@@ -17,13 +17,15 @@ html
   padding-bottom: 50px;
   padding-left: 80px;
   background: white;
-}
+} */
 
 
-
-
-html{
-  background-color: white;
+.inputBox{
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
 }
 
 #daypage{
