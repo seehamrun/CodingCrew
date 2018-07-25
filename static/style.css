@@ -46,7 +46,9 @@ font-size: 18px;
 }
 
 #colorKey{
-  align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
   width: 200px;
   height: 200px
@@ -95,9 +97,15 @@ h1,p,a,li{
   color: black;
 }
 
+table{
+  table-layout: fixed;
+}
+
 td{
   font-family: arial;
   border-radius: 30%;
+  width: 3%;
+  font-weight: bold;
 }
 
 .date{
@@ -139,6 +147,5 @@ textarea{
 }
 
 select{
-
   background-color: #88B24B;
 }

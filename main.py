@@ -5,6 +5,7 @@ import database
 import logging
 import json
 import random
+import time
 from google.appengine.api import urlfetch
 from google.appengine.api import users
 from google.appengine.ext import ndb
@@ -105,11 +106,8 @@ class EnterInfo(webapp2.RequestHandler):
         day_log = database.StoredDate(day=dayInput, mood=moodInput, notes=notesInput,
                                   sleep=sleepInput, activity=activityInput, color=colorInput, username=user)
         day_log.put()
-        response_html = jinja_env.get_template('templates/userInputPage.html')
-        data = {
-            'day': dayInput
-        }
-        self.response.write(response_html.render(data))
+        time.sleep(0.1)
+        self.redirect("/view_day?day=%s" % dayInput)
 
 giphy_api_key = "GgFZf48OO1lfS1C4hm9gMI0jt2sMIaFS"
 
