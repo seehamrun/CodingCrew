@@ -95,9 +95,14 @@ h1,p,a,li{
   color: black;
 }
 
+table{
+  table-layout: fixed;
+}
+
 td{
   font-family: arial;
   border-radius: 30%;
+  width: 3%;
 }
 
 .date{
