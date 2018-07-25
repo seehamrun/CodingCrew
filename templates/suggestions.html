@@ -9,18 +9,19 @@
 <body>
   {{user_nickname}}
   {% for song in music %}
-  <div id='result'>
     <p> {{song}} </p>
   </div>
   {% endfor %}
+
+  <div id="result">
+    <img id="resultImg" src="{{gif}}"/>
+  </div>
+
+  <br>
+  <br>
+
+<div id="goBack">
   <a href="/">Head back to your mood map!!</a>
-
-<br>
-<br>
-
-
-<div id="result">
-  <img src="{{gif}}"/>
 </div>
 
 </body>

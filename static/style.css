@@ -16,9 +16,19 @@ html, body
   background: white;
 }
 
+#goBack{
+  text-align:center;
+}
 
 html{
   background-color: white;
+}
+
+#resultImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
 #daypage{
@@ -141,6 +151,10 @@ td{
 .logout {
   float: right;
   padding: 15px
+}
+
+.songs{
+  text-align: center;
 }
 
 textarea{
