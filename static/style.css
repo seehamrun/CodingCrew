@@ -12,11 +12,8 @@ html, body
   padding-right: 30px;
   padding-bottom: 50px;
   padding-left: 80px;
-  background: linear-gradient(#E55D87, #5FC3E4);
+  background: white;
 }
-
-
-
 
 html{
   background-color: white;
@@ -24,7 +21,7 @@ html{
 
 #daypage{
 text-align: center;
-font-family: 'American Typewriter', serif;
+font-family: arial;
 font-size: 18px;
 
 }
@@ -36,10 +33,9 @@ font-size: 18px;
 
 #title{
   text-align: center;
-  font-family: 'American Typewriter', serif;
+  font-family: arial;
   font-size: 50px;
 }
-
 
 #linkToMap{
   text-align: center;
@@ -59,7 +55,7 @@ font-size: 18px;
   height: 5%;
   background: white;
   border-radius: 10px;
-  background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+  /*background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);*/
 
 
 }
@@ -72,12 +68,10 @@ font-size: 18px;
 
 .center{
   text-align: center;
-  width: 100%;
+  width: 50px;
   height: 100%;
-  background: white;
+  background: #9F9FA1;
   border-radius: 10px;
-
-  background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
 
 
 }
@@ -92,13 +86,17 @@ a:hover{
   font-style: oblique;
 }
 
-h1{
+h1,p,a,li{
   font-family: arial;
   color: black;
 }
 
 td{
   font-family: arial;
+  padding: 30%;
+}
+
+.date{
   padding: 10px;
 }
 
@@ -132,5 +130,10 @@ td{
 
 textarea{
 
-  background-color:#d6abf2;
+  background-color: #88B24B;
+}
+
+select{
+
+  background-color: #88B24B;
 }
