@@ -46,7 +46,9 @@ font-size: 18px;
 }
 
 #colorKey{
-  align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
   width: 200px;
   height: 200px
@@ -103,6 +105,7 @@ td{
   font-family: arial;
   border-radius: 30%;
   width: 3%;
+  font-weight: bold;
 }
 
 .date{
