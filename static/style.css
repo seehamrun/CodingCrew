@@ -178,3 +178,22 @@ textarea{
 select{
   background-color: #88B24B;
 }
+
+ul{
+font-size: 20
+}
+
+ul {
+    background: DodgerBlue;
+    padding: 20px;
+}
+
+
+ul li {
+    background: white;
+    margin: 5px;
+}
+
+ul{
+  list-style-type: none;
+}
