@@ -80,13 +80,12 @@ font-size: 18px;
 
 
 .center{
+  color: black;
   text-align: center;
   width: 50px;
   height: 100%;
   background: #9F9FA1;
   border-radius: 10px;
-
-
 }
 
 a:link, a:visited{
@@ -119,14 +118,16 @@ td{
     padding: 10px;
 }
 
-
+#mainTitle{
+    background-image: url(header4.png);
+    align-items: center;
+    padding-top: 20px;
+    height: 60px;
+}
 .headl{
-  font-family: helvetica;
+  color: black;
+  font-family: georgia;
   text-align: center;
-  padding-top: 20px;
-  height: 60px;
-  background-image: url(qbkls.jpg);
-  background-repeat: repeat;
   /*
 
   background: -webkit-linear-gradient(left, #CC2431 , #F6D357, #88B24B, #5687A3, #2a466d, #9F9FA1);
