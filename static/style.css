@@ -68,7 +68,7 @@ font-size: 18px;
   height: 5%;
   background: white;
   border-radius: 10px;
-  /* background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4); */
+
 
 
 }
@@ -118,12 +118,6 @@ td{
     padding: 10px;
 }
 
-#mainTitle{
-    background-image: url(header4.png);
-    align-items: center;
-    padding-top: 20px;
-    height: 60px;
-}
 .headl{
   color: black;
   font-family: georgia;
