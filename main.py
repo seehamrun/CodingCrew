@@ -34,7 +34,7 @@ class HomePage(webapp2.RequestHandler):
         february = {}
         for i in range(1,29):
             february[i] = i
-        times = "Current date is %s %s , %s" % (datetime.datetime.now().month, datetime.datetime.now().day, datetime.datetime.now().year)
+        times = "Current date: %s/%s/%s" % (datetime.datetime.now().month, datetime.datetime.now().day, datetime.datetime.now().year)
         dates = database.StoredDate.query(database.StoredDate.username == user.nickname()).fetch()
         values = {
             'time': times,
