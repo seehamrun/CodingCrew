@@ -21,6 +21,7 @@ html
 
 
 .inputBox{
+  font-size: 25px;
   text-align: center;
   padding-top: 20px;
   padding-right: 30px;
@@ -94,7 +95,7 @@ a:link, a:visited{
 }
 
 a:hover{
-  color: blue;
+  /* color: blue; */
   font-style: oblique;
 }
 
@@ -172,26 +173,26 @@ td{
 }
 
 textarea{
-  background-color:#88B24B;
+  background-color: #9F9FA1;
   font-size:15px;
 }
 
 select{
-  background-color: #88B24B;
+  background-color: #9F9FA1;
 }
 
 ul{
-font-size: 20
+font-size: 30px;
 }
 
 ul {
-    background: DodgerBlue;
+    /* background: white; */
     padding: 20px;
 }
 
 
 ul li {
-    background: white;
+    /* background: white; */
     margin: 5px;
 }
 
