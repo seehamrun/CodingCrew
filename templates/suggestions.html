@@ -11,7 +11,9 @@
   {{user_nickname}}
   {% for song in music %}
   <div class='songs'>
+    <a href="http://freemusicarchive.org/search/?quicksearch= + {{song[:-7]}}"
     <p> {{song[:-7]}} </p>
+
   </div>
   {% endfor %}
 
